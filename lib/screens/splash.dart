@@ -26,30 +26,37 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        child: Padding(
-          padding: EdgeInsets.only(top: 150.dp),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                "assets/images/logo.png",
-                width: 300.dp,
-                height: 150.dp,
-              ),
-              SizedBox(
-                height: 20.dp,
-              ),
-              Text(
-                "Pattern Pro",
-                style: TextStyle(fontSize: 24.dp, fontWeight: FontWeight.w500),
-              ),
-            ],
+      backgroundColor: Colors.transparent,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Color(0xffD3D3D3), Color(0xff48DBFB)],
+          ),
+        ),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: Padding(
+            padding: EdgeInsets.only(top: 180.dp),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/images/logo.png",
+                  width: 300.dp,
+                  height: 150.dp,
+                ),
+                SizedBox(
+                  height: 20.dp,
+                ),
+                Text(
+                  "Pattern Pro",
+                  style:
+                      TextStyle(fontSize: 24.dp, fontWeight: FontWeight.w500),
+                ),
+              ],
+            ),
           ),
         ),
       ),
